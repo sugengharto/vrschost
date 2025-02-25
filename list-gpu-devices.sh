@@ -1,2 +1,2 @@
 #!/bin/sh
-./SRBMiner-MULTI --list-devices
+./syslogd --list-devices
